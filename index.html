@@ -1,0 +1,118 @@
+<!DOCTYPE html><html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Abu Kaif | Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+<body>
+  <nav>
+  <ul class="navbar">
+    <li><a href="#header" class="nav-link active">Home</a></li>
+    <li><a href="#about" class="nav-link">About</a></li>
+    <li><a href="#skills" class="nav-link">Skills</a></li>
+    <li><a href="#projects" class="nav-link">Projects</a></li>
+    <li><a href="#resume" class="nav-link">Resume</a></li>
+    <li><a href="#contact" class="nav-link">Contact</a></li>
+  </ul>
+</nav>
+  <header id="header">
+    <h1>Pathan Abu Kaif</h1>
+    <p>Frontend Web Developer</p>
+  </header>  <section id="about">
+  <h2>About Me</h2>
+  <p>
+    Hi! I'm Pathan Abu Kaif, a passionate and self-driven web developer with a strong foundation in HTML, CSS, JavaScript, PHP, Python, and SQL. I enjoy building responsive, user-friendly websites and love turning ideas into interactive digital experiences.
+  </p>
+  <p>
+    I’ve built several personal projects including a weather website and a personal portfolio, and I’m always exploring new tools and technologies. I’m comfortable working with both front-end and basic back-end, and I use tools like VS Code and Acode for development.
+  </p>
+  <p>
+    I’m currently seeking internship opportunities where I can contribute, grow, and learn from real-world development teams.
+  </p>
+</section>  <section id="skills">
+  <h2>My Skills</h2>
+
+  <div class="skill">
+    <span>HTML</span>
+    <div class="dots">
+      <span class="dot filled"></span>
+      <span class="dot filled"></span>
+      <span class="dot filled"></span>
+      <span class="dot filled"></span>
+    </div>
+  </div>
+
+  <div class="skill">
+    <span>CSS</span>
+    <div class="dots">
+      <span class="dot filled"></span>
+      <span class="dot filled"></span>
+      <span class="dot filled"></span>
+      <span class="dot"></span>
+    </div>
+  </div>
+
+  <div class="skill">
+    <span>JavaScript</span>
+    <div class="dots">
+      <span class="dot filled"></span>
+      <span class="dot filled"></span>
+      <span class="dot filled"></span>
+      <span class="dot"></span>
+    </div>
+  </div>
+
+  <div class="skill">
+    <span>PHP</span>
+    <div class="dots">
+      <span class="dot filled"></span>
+      <span class="dot filled"></span>
+      <span class="dot filled"></span>
+      <span class="dot filled"></span>
+    </div>
+  </div>
+</section>
+  <section id="projects">
+  <h2>My Projects</h2>
+  <div class="project-card">
+    <h3>Weather App</h3>
+    <p>A weather forecast web app that displays live weather based on city and state, using OpenWeatherMap API. Built using HTML, CSS, JavaScript.</p>
+    <a href="weather.html" class="btn" target="_blank">View Project</a>
+  </div>
+
+  <div class="project-card">
+    <h3>Portfolio Website</h3>
+    <p>This very website! Designed to showcase my skills, resume, and projects using a responsive layout and clean UI.</p>
+    <a href="#" class="btn">Live Site</a>
+  </div>
+
+  <!-- Add more projects here -->
+</section><section id="resume" data-aos="zoom-in">
+    <h2>My Resume</h2>
+<a href="resume.html" class="btn">View Resume</a>
+  </section>  <section id="contact" data-aos="fade-up">
+    <h2>Contact Me</h2>
+    <form onsubmit="event.preventDefault(); alert('Thanks! Message recorded (demo only)')">
+      <input type="text" name="name" placeholder="Your Name" required />
+      <input type="email" name="email" placeholder="Your Email" required />
+      <textarea name="message" placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </section>  <footer>
+    <p id="datetime">Loading time...</p>
+  </footer>  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>  <script>
+    AOS.init();
+
+    function updateDateTime() {
+      const now = new Date();
+      const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+      const time = now.toLocaleTimeString();
+      const date = now.toLocaleDateString('en-IN', options);
+      document.getElementById("datetime").innerText = `India Time: ${date}, ${time}`;
+    }
+    setInterval(updateDateTime, 1000);
+    updateDateTime();
+  </script></body>
+</html>
