@@ -181,6 +181,189 @@ nav {
   flex-wrap: wrap; /* Allow items to wrap on small screens */
   gap: 10px; /* Adds some space between items */
 }
+/* Reset and basics */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  scroll-behavior: smooth;
+}
+
+body {
+  background: #f9f9f9;
+  color: #222;
+  line-height: 1.6;
+  padding: 20px;
+  max-width: 900px;
+  margin: auto;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+header h1 {
+  font-size: 2.8rem;
+  color: #0a74da;
+}
+
+header p {
+  font-size: 1.2rem;
+  color: #555;
+  margin-top: 6px;
+  letter-spacing: 2px;
+}
+
+/* Sections */
+section {
+  margin-bottom: 50px;
+  background: #fff;
+  padding: 25px 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgb(10 116 218 / 0.15);
+}
+
+section h2 {
+  color: #0a74da;
+  margin-bottom: 20px;
+  border-bottom: 3px solid #0a74da;
+  padding-bottom: 8px;
+  width: fit-content;
+}
+
+/* Skills */
+#skills {
+  padding: 40px 20px;
+  text-align: center;
+  background-color: #fff;
+}
+
+.skill {
+  margin-bottom: 20px;
+}
+
+.skill span {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.dots {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.dot {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: #ccc;
+}
+
+.dot.filled {
+  background-color: #0a74da;
+}
+
+@keyframes loadProgress {
+  to {
+    width: var(--width);
+  }
+}
+
+/* Download Resume Button */
+.btn {
+  display: inline-block;
+  background-color: #0a74da;
+  color: #fff;
+  padding: 12px 30px;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+  box-shadow: 0 5px 15px rgb(10 116 218 / 0.4);
+}
+
+.btn:hover {
+  background-color: #064a9f;
+  box-shadow: 0 8px 20px rgb(6 74 159 / 0.6);
+}
+
+/* Contact Form */
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+input, textarea {
+  padding: 12px;
+  margin-bottom: 15px;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+}
+
+input:focus, textarea:focus {
+  border-color: #0a74da;
+  outline: none;
+}
+
+textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+button {
+  padding: 12px;
+  background-color: #0a74da;
+  color: white;
+  font-weight: 600;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  box-shadow: 0 5px 15px rgb(10 116 218 / 0.4);
+}
+
+button:hover {
+  background-color: #064a9f;
+  box-shadow: 0 8px 20px rgb(6 74 159 / 0.6);
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 15px;
+  font-size: 0.9rem;
+  color: #555;
+  margin-top: 40px;
+  border-top: 1px solid #ccc;
+}
+/* Navbar styling */
+nav {
+  position: sticky;
+  top: 0;
+  background-color: #0a74da;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.15);
+  z-index: 1000;
+  width: 100%;
+  padding: 0 10px; /* Add small horizontal padding */
+  box-sizing: border-box;
+}
+
+.navbar {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  padding: 10px 0;
+  margin: 0;
+  flex-wrap: wrap; /* Allow items to wrap on small screens */
+  gap: 10px; /* Adds some space between items */
+}
 
 .navbar li {
   margin: 0 15px;
@@ -219,3 +402,95 @@ nav {
   margin-top: 0;
   color: #0a74da;
 }
+#projects {
+  padding: 40px;
+  background-color: #f8f8f8;
+}
+
+#projects h2 {
+  font-size: 32px;
+  margin-bottom: 20px;
+  text-align: center;
+  color: #333;
+}
+
+.project {
+  background-color: #fff;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  margin-bottom: 20px;
+}
+
+.project h3 {
+  font-size: 24px;
+  color: #007bff;
+}
+
+.project p {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #444;
+}
+
+.project ul {
+  margin-top: 10px;
+  padding-left: 20px;
+}
+
+.project ul li {
+  font-size: 15px;
+  color: #555;
+  line-height: 1.5;
+}￼Enter
+.navbar li {
+  margin: 0 15px;
+}
+
+.navbar a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  padding: 8px 12px;
+  border-radius: 6px;
+  transition: background-color 0.3s ease;
+}
+
+.navbar a:hover,
+.navbar a.active {
+  background-color: #064a9f;
+  box-shadow: 0 4px 10px rgba(6,74,159,0.5);
+}
+#projects {
+  padding: 40px 20px;
+  background-color: #f0f0f0;
+  text-align: center;
+}
+
+.project-card {
+ground: white;
+  margin: 20px auto;
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 600px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.project-card h3 {
+  margin-top: 0;
+  color: #0a74da;
+}
+#projects {
+  padding: 40px;
+  background-color: #f8f8f8;
+}
+
+#projects h2 {
+  font-size: 32px;
+  margin-bottom: 20px;
+  text-align: center;
+  color: #333;
+}
+
+.project {
+  background-color: #fff;
